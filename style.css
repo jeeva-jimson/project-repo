@@ -1,0 +1,158 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* 🔥 CONTAINER (THIS FIXES STRETCHING) */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+nav {
+  background: #111;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  color: #00aaff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero span {
+  color: #00aaff;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00aaff;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  padding: 70px 0;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* About text */
+.section p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Skills */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill {
+  background: #111;
+  padding: 12px;
+  border: 1px solid #00aaff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* 🔥 PROJECTS FIX (NO MORE STRETCH) */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00aaff;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* Contact */
+#contactForm {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #00aaff;
+  color: white;
+  border-radius: 6px;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 12px;
+  background: #00aaff;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+}
