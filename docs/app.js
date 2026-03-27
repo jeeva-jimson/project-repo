@@ -1,5 +1,5 @@
 // IMPORTANT: Replace this after Render deployment
-const API_URL = "https://your-backend-name.onrender.com";
+const API_URL = "https://project-repo-sosa.onrender.com";
 
 // State
 let courses = [];
