@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Feedback Management System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header class="header">
             <div class="header-content">
                 <h1>📚 Student Feedback System</h1>
                 <p class="subtitle">Help us improve your learning experience</p>
             </div>
+
             <nav class="nav-tabs">
                 <button class="nav-tab active" data-tab="submit">Submit Feedback</button>
                 <button class="nav-tab" data-tab="view">View Feedbacks</button>
@@ -21,31 +21,28 @@
             </nav>
         </header>
 
-        <!-- Submit Feedback Tab -->
         <section id="submit-tab" class="tab-content active">
             <div class="card">
                 <h2>Submit Your Feedback</h2>
                 <form id="feedback-form">
                     <div class="form-group">
                         <label for="studentName">Your Name *</label>
-                        <input type="text" id="studentName" name="studentName" required 
-                               placeholder="Enter your full name">
+                        <input type="text" id="studentName" required placeholder="Enter your full name" />
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required 
-                               placeholder="your.email@example.com">
+                        <input type="email" id="email" required placeholder="your.email@example.com" />
                     </div>
 
                     <div class="form-group">
                         <label for="courseId">Select Course *</label>
-                        <select id="courseId" name="courseId" required>
+                        <select id="courseId" required>
                             <option value="">-- Choose a course --</option>
                         </select>
                     </div>
- 
-                     <div class="form-group">
+
+                    <div class="form-group">
                         <label>Rate Your Experience *</label>
                         <div class="rating-container">
                             <div class="stars" id="star-rating">
@@ -57,13 +54,11 @@
                             </div>
                             <span class="rating-text" id="rating-text">Select rating</span>
                         </div>
-                        <input type="hidden" id="rating" name="rating" required>
                     </div>
 
                     <div class="form-group">
                         <label for="comments">Additional Comments (Optional)</label>
-                        <textarea id="comments" name="comments" rows="5" 
-                                  placeholder="Share your thoughts, suggestions, or concerns..."></textarea>
+                        <textarea id="comments" rows="5" placeholder="Share your thoughts..."></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit Feedback</button>
@@ -71,7 +66,6 @@
             </div>
         </section>
 
-        <!-- View Feedbacks Tab -->
         <section id="view-tab" class="tab-content">
             <div class="card">
                 <div class="card-header">
@@ -83,14 +77,13 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div id="feedbacks-container" class="feedbacks-grid">
                     <p class="loading">Loading feedbacks...</p>
                 </div>
             </div>
         </section>
 
-        <!-- Statistics Tab -->
         <section id="stats-tab" class="tab-content">
             <div class="card">
                 <h2>Course Statistics</h2>
@@ -101,7 +94,6 @@
         </section>
     </div>
 
-    <!-- Toast Notification -->
     <div id="toast" class="toast"></div>
 
     <script src="app.js"></script>
