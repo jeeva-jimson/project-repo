@@ -13,10 +13,10 @@ app.use(express.static('public'));
 // In-memory database (replace with actual database in production)
 let feedbacks = [];
 let courses = [
-  { id: 1, name: 'Computer Science 101', instructor: 'Dr. Smith' },
-  { id: 2, name: 'Mathematics 201', instructor: 'Prof. Johnson' },
-  { id: 3, name: 'Physics 301', instructor: 'Dr. Williams' },
-  { id: 4, name: 'Chemistry 101', instructor: 'Prof. Brown' }
+  { id: 1, name: 'Computer Science 101', instructor: 'Dr. Oliver' },
+  { id: 2, name: 'Mathematics 201', instructor: 'Prof. Rithesh' },
+  { id: 3, name: 'Physics 301', instructor: 'Dr. Harshan' },
+  { id: 4, name: 'Chemistry 101', instructor: 'Prof. Parth' }
 ];
 
 // Routes
