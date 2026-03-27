@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📚 Student Feedback System</h1>
+                <p class="subtitle">Help us improve your learning experience</p>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="submit">Submit Feedback</button>
+                <button class="nav-tab" data-tab="view">View Feedbacks</button>
+                <button class="nav-tab" data-tab="stats">Statistics</button>
+            </nav>
+        </header>
+
+        <!-- Submit Feedback Tab -->
+        <section id="submit-tab" class="tab-content active">
+            <div class="card">
+                <h2>Submit Your Feedback</h2>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="studentName">Your Name *</label>
+                        <input type="text" id="studentName" name="studentName" required 
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseId">Select Course *</label>
+                        <select id="courseId" name="courseId" required>
+                            <option value="">-- Choose a course --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rate Your Experience *</label>
+                        <div class="rating-container">
+                            <div class="stars" id="star-rating">
+                                <span class="star" data-rating="1">☆</span>
+                                <span class="star" data-rating="2">☆</span>
+                                <span class="star" data-rating="3">☆</span>
+                                <span class="star" data-rating="4">☆</span>
+                                <span class="star" data-rating="5">☆</span>
+                            </div>
+                            <span class="rating-text" id="rating-text">Select rating</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Additional Comments (Optional)</label>
+                        <textarea id="comments" name="comments" rows="5" 
+                                  placeholder="Share your thoughts, suggestions, or concerns..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- View Feedbacks Tab -->
+        <section id="view-tab" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>All Feedbacks</h2>
+                    <div class="filter-group">
+                        <label for="filterCourse">Filter by Course:</label>
+                        <select id="filterCourse">
+                            <option value="">All Courses</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="feedbacks-container" class="feedbacks-grid">
+                    <p class="loading">Loading feedbacks...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Tab -->
+        <section id="stats-tab" class="tab-content">
+            <div class="card">
+                <h2>Course Statistics</h2>
+                <div id="statistics-container" class="stats-grid">
+                    <p class="loading">Loading statistics...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
